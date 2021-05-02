@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.plantshome.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_report"
+        android:name="com.example.plantshome.ui.Report.fragment_report"
+        android:label="@string/menu_report"
+        tools:layout="@layout/fragment_report_fragment" />
+
+    <fragment
+        android:id="@+id/nav_taskpanel"
+        android:name="com.example.plantshome.ui.taskpanel.Fragment_taskpanel"
+        android:label="@string/menu_taskpanel"
+        tools:layout="@layout/fragment_taskpanel_fragment" />
+ <fragment
+        android:id="@+id/nav_badge"
+        android:name="com.example.plantshome.ui.Badge.Fragment_Badge"
+        android:label="@string/menu_badge"
+        tools:layout="@layout/fragment__badge_fragment" />
+ <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.example.plantshome.ui.feedback.Fragment_Feedback"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment__feedback_fragment" />
+
+
+
+</navigation>

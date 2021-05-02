@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/halfWhite"
+    tools:context=".ui.taskpanel.Fragment_taskpanel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_chip_nav"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="50px"
+        android:layout_marginRight="0dp"
+        />
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="0px"
+            android:src="@drawable/_"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="55px"
+            android:text="Its Time to water Jade Pothos Plant Free"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_chip_nav"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="50px"
+            android:layout_marginRight="0dp"
+            />
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="0px"
+            android:src="@drawable/_"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="55px"
+            android:text="Its Time to water Jade Pothos Plant Free"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@android:color/white"
+        android:drawableTint="@color/white"
+        android:gravity="center"
+        android:text="Completed Task"
+        android:textColor="@color/white"
+
+        app:backgroundTint="@color/green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_chip_nav"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:checked="true"
+            android:layout_margin="50px"
+            android:layout_marginRight="0dp"
+            />
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="0px"
+            android:src="@drawable/_"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="55px"
+            android:text="Its Time to water Jade Pothos Plant Free"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_chip_nav"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:checked="true"
+            android:layout_margin="50px"
+            android:layout_marginRight="0dp"
+            />
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="0px"
+            android:src="@drawable/_"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="55px"
+            android:text="Its Time to water Jade Pothos Plant Free"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/rounded_chip_nav"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/white"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:checked="true"
+            android:layout_margin="50px"
+            android:layout_marginRight="0dp"
+            />
+
+
+        <ImageView
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_margin="0px"
+            android:src="@drawable/_"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="55px"
+            android:text="Its Time to water Jade Pothos Plant Free"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

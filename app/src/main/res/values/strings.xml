@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">PlantsHome</string>
+    <string name="title">Plant Home</string>
+    <string name="description">Add Your New House Plants Here As your collection Grown and we will help you get care of them</string>
+    <string name="get_started">Get Started</string>
+    <string name="thank">Thanks for being a part of us!</string>
+
+
+    <string name="plant_detail">The Monstera Adanonsii, aka the "Swiss Cheese" plant, is an easy to care for plant that Appreciates bright, indirect light. It is tolerant of medium - low light conditions, but prefers an east or west facing window.</string>
+
+
+
+
+    <string name="title_activity__main">Activity_Main</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Admin</string>
+    <string name="nav_header_subtitle">Care Plants Safe Life</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+<!--    Nav -->
+
+    <string name="menu_home">Home</string>
+    <string name="menu_report">Daily Report</string>
+    <string name="menu_taskpanel">Tasks Panel</string>
+    <string name="menu_badge">Badges</string>
+    <string name="menu_feedback">FeedBack</string>
+    <string name="menu_rate">Rate Us</string>
+
+</resources>

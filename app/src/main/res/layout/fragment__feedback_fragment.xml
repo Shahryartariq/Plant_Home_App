@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mybg"
+    android:orientation="vertical"
+    tools:context=".ui.feedback.Fragment_Feedback">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="64dp"
+        android:background="#fff"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="8dp"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="381dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+
+
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="FEEDBACK"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="Email"
+                android:inputType="text"
+                android:textColor="@color/green"
+
+                />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@color/green"
+
+
+                />
+
+            <EditText
+                android:id="@+id/myFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:hint="Feedback"
+                android:inputType="text|textMultiLine"
+                android:lines="4"
+                android:maxLines="8"
+                android:minLines="3"
+                android:textColor="@color/green" />
+
+            <Button
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_rounded"
+                android:elevation="8dp"
+                android:text="SUBMIT"
+                android:onClick="gotoThank"
+                tools:ignore="onClick"
+                android:textColor="@color/white"
+                card_view:backgroundTint="@color/green"
+                card_view:iconTint="@color/green" />
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

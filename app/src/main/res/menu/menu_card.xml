@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <item
+        android:id="@+id/plantAll"
+        android:title="All"/>
+
+    <item
+        android:id="@+id/plantSmall"
+        android:title="Small"
+         />
+
+    <item
+        android:id="@+id/plantMedium"
+        android:title="Medium"
+        />
+
+    <item
+        android:id="@+id/plantTall"
+        android:title="Tall"
+         />
+ <item
+        android:id="@+id/plantHanging"
+        android:title="Hanging"
+        />
+
+
+
+
+</menu>
