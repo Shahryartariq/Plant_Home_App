@@ -121,8 +121,10 @@
         card_view:strokeColor="@color/black" />
 
     <ImageView
+        android:id="@+id/btnfb"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:clickable="true"
         android:src="@drawable/sign_in_icons__2_"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
@@ -132,6 +134,8 @@
         card_view:layout_constraintVertical_bias="0.0" />
 
     <ImageView
+        android:id="@+id/btngo"
+        android:clickable="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/sign_in_icons__1_"

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PlantsHome</string>
     <string name="title">Plant Home</string>
-    <string name="description">Add Your New House Plants Here As your collection Grown and we will help you get care of them</string>
+    <string name="description">Add Your New House Plants Here As your collection Grown and we will help you get care of them.</string>
     <string name="get_started">Get Started</string>
     <string name="thank">Thanks for being a part of us!</string>
 

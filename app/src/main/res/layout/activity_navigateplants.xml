@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:fontFamily="@font/poppinsregular"
         android:text="My Plant World"
         android:textColor="@color/white"
         android:textColorHighlight="@color/white"
