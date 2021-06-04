@@ -48,11 +48,11 @@
                 android:textSize="20dp" />
 
             <EditText
-                android:id="@+id/userName"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:hint="UserName"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
                 android:layout_margin="20dp"
                 android:textColor="@color/green"
 
@@ -65,6 +65,7 @@
                 android:inputType="textPassword"
                 android:hint="Password"
                 android:layout_margin="20dp"
+
                 android:textColor="@color/green"
 
 
@@ -85,7 +86,9 @@
 
     </androidx.cardview.widget.CardView>
 
+
     <Button
+        android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
@@ -96,11 +99,28 @@
         card_view:iconTint="#00FFFFFF"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.224"
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toBottomOf="@+id/cardView"
-        card_view:layout_constraintVertical_bias="0.285"
+        card_view:layout_constraintVertical_bias="0.0"
         card_view:strokeColor="@color/black" />
 
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:shadowColor="@color/black"
+        android:text="@string/create_account"
+        android:textColor="@color/green"
+        card_view:backgroundTint="#FFFFFF"
+        card_view:iconTint="#00FFFFFF"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/cardView"
+        card_view:layout_constraintVertical_bias="0.393"
+        card_view:strokeColor="@color/black" />
 
     <Button
         android:id="@+id/button"
@@ -145,6 +165,21 @@
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toBottomOf="@+id/button"
         card_view:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progessBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="39dp"
+        android:layout_height="46dp"
+
+        android:visibility="gone"
+        card_view:layout_constraintBottom_toBottomOf="parent"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintHorizontal_bias="0.666"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/cardView"
+        card_view:layout_constraintVertical_bias="0.012"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
