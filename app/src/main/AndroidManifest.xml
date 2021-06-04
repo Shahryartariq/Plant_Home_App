@@ -26,6 +26,7 @@
         <activity android:name=".Activity_NavigatePlants" />
         <activity android:name=".Activity_Detail" />
         <activity android:name=".Activity_Thanks" />
+        <activity android:name=".Activity_Signup"/>
     </application>
 
 </manifest>
