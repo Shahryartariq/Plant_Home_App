@@ -1,127 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/halfWhite"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Activity_Choices"
+    android:fontFamily="@font/poppinsblack"
+
 
     >
 
 
-        <ImageButton
-            android:id="@+id/backToMain"
-            android:layout_width="101dp"
-            android:layout_height="51dp"
-            android:layout_gravity="center"
-            android:background="@drawable/back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.023" />
+        <!--        <ImageButton-->
+        <!--            android:id="@+id/backToMain"-->
+        <!--            android:layout_width="101dp"-->
+        <!--            android:layout_height="51dp"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:background="@drawable/back"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.0"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:layout_constraintVertical_bias="0.023" />-->
 
         <TextView
+            android:id="@+id/textView6"
             android:layout_width="365dp"
             android:layout_height="42dp"
+            android:fontFamily="@font/poppinsblack"
+
             android:text="Select Your Choices"
-
-
             android:textColor="@color/textHalfBlack"
             android:textColorHighlight="@color/textHalfBlack"
-            android:textSize="60px"
+            android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.913"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.712" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="173dp"
-            android:layout_height="30dp"
-            android:text="Indoor Plants"
-            android:textColor="@color/textHalfBlack"
-            android:textColorHighlight="@color/textHalfBlack"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.193"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.203" />
-
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@android:color/white"
-            android:text="Black-Eyed Susan"
-            android:textColor="@color/green"
-            app:backgroundTint="@color/white"
-            app:layout_constraintBottom_toTopOf="@+id/textView3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.779"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.925" />
-
-        <Button
-            android:layout_width="102dp"
-            android:layout_height="43dp"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@android:color/white"
-            android:text="Adonis"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/green"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button17"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.155"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <!-- Button -->
-
-
-        <!--        Sales       -->
-
-        <!-- Button -->
-
-
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@android:color/white"
-            android:text="Ambassador Allium"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/green"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.235"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.914" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@android:color/white"
-            android:text="Aloe Vera"
-            android:textColor="@color/green"
-            app:backgroundTint="@color/white"
-            app:layout_constraintBaseline_toBaselineOf="@+id/button13"
-            app:layout_constraintEnd_toStartOf="@+id/button13"
-            app:layout_constraintHorizontal_bias="0.574"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintVertical_bias="0.55" />
 
         <Button
             android:id="@+id/button3"
@@ -134,12 +53,101 @@
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintHorizontal_bias="0.098"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.472" />
+            app:layout_constraintVertical_bias="0.428" />
 
         <Button
+            android:id="@+id/button17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@android:color/white"
+            android:text="Black-Eyed Susan"
+            android:textColor="@color/green"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.888" />
+
+        <Button
+            android:id="@+id/button6"
+
+            android:layout_width="102dp"
+            android:layout_height="43dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Adonis"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button4"
+
+            android:layout_width="180dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="208dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Butterfly Weed"
+            android:textColor="@color/green"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.121"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.611" />
+
+        <TextView
+            android:id="@+id/textView3"
+
+            android:layout_width="124dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="272dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Sales"
+            android:textColor="@color/textHalfBlack"
+            android:textColorHighlight="@color/textHalfBlack"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.097"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/backToMain"
+            app:layout_constraintVertical_bias="0.62" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@android:color/white"
+            android:text="Ambassador Allium"
+            android:fontFamily="@font/poppinsregular"
+
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.122"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.894" />
+
+        <Button
+            android:fontFamily="@font/poppinsregular"
+
             android:id="@+id/button13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -150,62 +158,51 @@
             app:backgroundTint="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.818"
+            app:layout_constraintHorizontal_bias="0.813"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.379" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="124dp"
-            android:layout_height="27dp"
-            android:text="Sales"
-            android:textColor="@color/textHalfBlack"
-            android:textColorHighlight="@color/textHalfBlack"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.144"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/backToMain"
-            app:layout_constraintVertical_bias="0.62" />
+            app:layout_constraintVertical_bias="0.32" />
 
         <Button
-            android:layout_width="180dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="180dp"
-            android:background="@drawable/button_rounded"
-            android:backgroundTint="@android:color/white"
-            android:text="Butterfly Weed"
-            android:textColor="@color/green"
-            app:backgroundTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.199"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.611" />
+            android:fontFamily="@font/poppinsregular"
 
-        <Button
+            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="112dp"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Bunchberry"
+            android:text="Aloe Vera"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
+            app:layout_constraintBaseline_toBaselineOf="@+id/button13"
+            app:layout_constraintEnd_toStartOf="@+id/button13"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnRegister"
+
+            android:layout_width="344dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="@android:color/white"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Register"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.179"
+            app:layout_constraintHorizontal_bias="0.388"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <Button
+            android:id="@+id/button7"
             android:layout_width="167dp"
             android:layout_height="50dp"
-            android:layout_marginBottom="112dp"
+            android:layout_marginBottom="144dp"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:text="Bougainvillea"
@@ -213,27 +210,53 @@
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.86"
+            app:layout_constraintHorizontal_bias="0.811"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="344dp"
-            android:layout_height="54dp"
-            android:layout_marginBottom="32dp"
+            android:id="@+id/button5"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="144dp"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Register"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/green"
+            android:fontFamily="@font/poppinsregular"
+            android:text="Bunchberry"
+            android:textColor="@color/green"
+            app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="173dp"
+            android:layout_height="30dp"
+            android:text="Indoor Plants"
+            android:fontFamily="@font/poppinsmedium"
+
+            android:textColor="@color/textHalfBlack"
+            android:textColorHighlight="@color/textHalfBlack"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.117"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145" />
+
+        <!-- Button -->
+
+
+        <!--        Sales       -->
+
+        <!-- Button -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

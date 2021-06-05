@@ -27,6 +27,8 @@
         <activity android:name=".Activity_Detail" />
         <activity android:name=".Activity_Thanks" />
         <activity android:name=".Activity_Signup"/>
+        <activity android:name=".Activity_VerifyEmail"/>
+        <activity android:name=".ResetPassword"/>
     </application>
 
 </manifest>

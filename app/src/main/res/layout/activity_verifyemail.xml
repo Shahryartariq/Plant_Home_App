@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_VerifyEmail"
+    android:background="@drawable/mybg"
+    >
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="109dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="584dp"
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@android:color/white"
+        android:text="Logout"
+        android:textColor="@color/black"
+
+        app:backgroundTint="#FFFFFF"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/verifyEmailMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsblack"
+        android:gravity="center_horizontal"
+        android:text="Please Verify your email"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/verifyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.959" />
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="107dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="584dp"
+        android:background="@drawable/button_rounded"
+        android:backgroundTint="@android:color/white"
+        android:text="Verify"
+        android:textColor="@color/black"
+
+        app:backgroundTint="#FFFFFF"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
