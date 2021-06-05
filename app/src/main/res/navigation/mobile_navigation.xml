@@ -33,6 +33,19 @@
         android:label="@string/menu_feedback"
         tools:layout="@layout/fragment__feedback_fragment" />
 
+ <fragment
+        android:id="@+id/share"
+        android:name="com.example.plantshome.ui.share.Fragment_Share"
+        android:label=""
+        tools:layout="@layout/fragment__share_fragment" />
+
+    <fragment
+        android:id="@+id/btnLogout"
+        android:name="com.example.plantshome.ui.Logout.Fragment_Logout"
+        android:label=""
+        tools:layout="@layout/fragment__logout_fragment" />
+
+
 
 
 </navigation>

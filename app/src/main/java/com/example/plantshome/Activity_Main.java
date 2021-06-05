@@ -37,7 +37,7 @@ public class Activity_Main extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_report, R.id.nav_taskpanel, R.id.nav_badge, R.id.nav_feedback)
+                R.id.nav_home, R.id.nav_report, R.id.nav_taskpanel, R.id.btnLogout, R.id.share,R.id.nav_badge, R.id.nav_feedback)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
