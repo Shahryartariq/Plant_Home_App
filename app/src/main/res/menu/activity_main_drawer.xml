@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:title="Communicate" android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
@@ -25,6 +25,8 @@
             android:id="@+id/nav_feedback"
             android:icon="@drawable/ic_feedback"
             android:title="@string/menu_feedback" />
+
+
     </group>
 
     <item  android:title="Communicate">
@@ -34,14 +36,16 @@
                 android:title="@string/menu_rate"
                 />
 
-            <item android:id="@+id/nav_share"
+            <item android:id="@+id/share"
                 android:icon="@drawable/ic_share"
                 android:title="Share"
                 />
-            <item android:id="@+id/nav_signout"
+
+            <item android:id="@+id/btnLogout"
                 android:icon="@drawable/ic_logout"
-                android:title="Log Out"
+                android:title="Logout"
                 />
+
 
         </menu>
 
