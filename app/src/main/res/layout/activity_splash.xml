@@ -9,18 +9,30 @@
 
     >
 
+<!--    <TextView-->
+<!--        android:id="@+id/tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="AirPlane Mood is On"-->
+<!--        android:textSize="25dp"-->
+
+<!--        app:layout_constraintBottom_toTopOf="@+id/splashLogo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.087"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0" />-->
 
     <ImageView
         android:id="@+id/splashLogo"
-        android:layout_width="266dp"
-        android:layout_height="336dp"
+        android:layout_width="257dp"
+        android:layout_height="194dp"
         android:src="@drawable/mylogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.871"
         tools:ignore="MissingConstraints" />
 
 

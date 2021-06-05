@@ -45,6 +45,17 @@
         android:label=""
         tools:layout="@layout/fragment__logout_fragment" />
 
+    <fragment
+        android:id="@+id/rate"
+        android:name="com.example.plantshome.ui.rate.Fragment_rate"
+        android:label=""
+        tools:layout="@layout/fragment_rate_fragment" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.plantshome.ui.profile.Fragment_Profile"
+        android:label=""
+        tools:layout="@layout/fragment__profile_fragment" />
+
 
 
 

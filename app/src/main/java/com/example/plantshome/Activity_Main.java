@@ -1,7 +1,9 @@
 package com.example.plantshome;
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,7 +39,7 @@ public class Activity_Main extends AppCompatActivity {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_report, R.id.nav_taskpanel, R.id.btnLogout, R.id.share,R.id.nav_badge, R.id.nav_feedback)
+                R.id.nav_home, R.id.nav_report, R.id.nav_taskpanel, R.id.btnLogout, R.id.share, R.id.rate,R.id.nav_badge, R.id.nav_feedback)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -72,6 +74,18 @@ public class Activity_Main extends AppCompatActivity {
         startActivity(intentThank);
 
     }
+
+    public void gotoMain(View view) {
+        Intent intentThank = new Intent(this, Activity_Main.class);
+        startActivity(intentThank);
+
+    }
+
+    public void gotoSplash() {
+        Intent intentThank = new Intent(this, Activity_Main.class);
+        startActivity(intentThank);
+
+    }
     public boolean onOptionsItemSelected(MenuItem item)
     {
         switch (item.getItemId()) {
@@ -96,12 +110,12 @@ public class Activity_Main extends AppCompatActivity {
 
 
             case R.id.action_rate:
-                Toast
-                        .makeText(
-                                getApplicationContext(),
-                                "Rate Us",
-                                Toast.LENGTH_SHORT)
-                        .show();
+                try{
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.plantnet")));
+                }
+                catch (ActivityNotFoundException e){
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=org.plantnet")));
+                }
                 return true;
 
 
@@ -125,8 +139,10 @@ public class Activity_Main extends AppCompatActivity {
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         moveTaskToBack(true);
+
                                         android.os.Process.killProcess(android.os.Process.myPid());
                                         System.exit(1);
+
                                     }
                                 })
 
