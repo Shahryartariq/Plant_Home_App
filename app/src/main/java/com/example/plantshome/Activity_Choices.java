@@ -20,13 +20,13 @@ public class Activity_Choices extends AppCompatActivity {
             getSupportActionBar().hide();
         }
 
-        backbtn = (ImageButton)findViewById(R.id.backToMain);
-        backbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
+//        backbtn = (ImageButton)findViewById(R.id.backToMain);
+//        backbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                onBackPressed();
+//            }
+//        });
 
         btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(new View.OnClickListener(){

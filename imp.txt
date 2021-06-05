@@ -1,0 +1,26 @@
+
+splash screen text aur button thora sa nechy
+profile icon --> white
+daily report --> "All done" button not workng
+All done krna --> redirect to badges
+Tasks Panel "Completed task" Not working , redirecting that too on "Badges Screen"
+
+make these blocks little above; spacing h upr sy kafi.
+
+
+"Badges" --> Btn Text --> white
+ 		make the bagdge img" centered align
+		rmv the box and text over it . place the btn below the "badge image with text "Start Second day"
+
+
+
+End per redirect ho kr splash screen per aa jaye
+
+Fix exit page; redirect to splash 
+
+------------------------
+login
+signup
+forgot Password
+
+agar time tu recyclor view
