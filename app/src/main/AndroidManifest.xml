@@ -20,15 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_GetStarted" />
-        <activity android:name=".Activity_Login" />
-        <activity android:name=".Activity_Choices" />
-        <activity android:name=".Activity_NavigatePlants" />
-        <activity android:name=".Activity_Detail" />
-        <activity android:name=".Activity_Thanks" />
-        <activity android:name=".Activity_Signup"/>
-        <activity android:name=".Activity_VerifyEmail"/>
+        <activity android:name=".Activity_GetStarted" android:parentActivityName=".Activity_Splash" />
+        <activity android:name=".Activity_Login" android:parentActivityName=".Activity_GetStarted" />
+        <activity android:name=".Activity_Choices" android:parentActivityName=".Activity_Login" />
+        <activity android:name=".Activity_NavigatePlants" android:parentActivityName=".Activity_Choices" />
+        <activity android:name=".Activity_Detail" android:parentActivityName=".Activity_Main"/>
+        <activity android:name=".Activity_Thanks"  android:parentActivityName=".Activity_Main"/>
+        <activity android:name=".Activity_Signup" android:parentActivityName=".Activity_Login"/>
+        <activity android:name=".Activity_VerifyEmail" android:parentActivityName=".Activity_Login"/>
         <activity android:name=".ResetPassword"/>
+        <activity android:name=".Activity_Profile" android:parentActivityName=".Activity_Main"/>
     </application>
 
 </manifest>
