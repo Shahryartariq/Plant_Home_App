@@ -5,36 +5,87 @@
     <string name="get_started">Get Started</string>
     <string name="thank">Thanks for being a part of us!</string>
 
-
     <string name="plant_detail">The Monstera Adanonsii, aka the "Swiss Cheese" plant, is an easy to care for plant that Appreciates bright, indirect light. It is tolerant of medium - low light conditions, but prefers an east or west facing window.</string>
 
-
-    <string name="title_activity__main">Activity_Main</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Admin</string>
     <string name="nav_header_subtitle">Care Plants Safe Life</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="action_notifications">Notifications</string>
+    <string name="action_exit">Exit</string>
 
-
-    <!--Login SignUp-->
+    <!-- Login / sign up -->
     <string name="create_account">Create Your Account</string>
     <string name="name">Full Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
 
-
-
-
-    <!--    Nav -->
-
+    <!-- Navigation drawer -->
     <string name="menu_home">Home</string>
     <string name="menu_report">Daily Report</string>
     <string name="menu_taskpanel">Tasks Panel</string>
     <string name="menu_badge">Badges</string>
     <string name="menu_feedback">FeedBack</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_group_communicate">Communicate</string>
     <string name="menu_rate">Rate Us</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_logout">Logout</string>
 
+    <!-- Validation -->
+    <string name="error_full_name_required">Full name is required</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_email_invalid">Please enter a valid email</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least %1$d characters</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+    <string name="error_feedback_required">Please write your feedback</string>
+
+    <!-- Auth messages -->
+    <string name="message_please_wait">Please wait…</string>
+    <string name="message_generic_error">Something went wrong. Please try again.</string>
+    <string name="message_network_error">No internet connection. Please try again.</string>
+    <string name="message_wrong_credentials">Wrong email or password</string>
+    <string name="message_email_in_use">An account with this email already exists</string>
+    <string name="message_too_many_requests">Too many attempts. Please wait a moment and try again.</string>
+    <string name="message_recent_login_required">For your security, please log in again and retry.</string>
+    <string name="message_reset_email_sent">If an account exists for that email, a reset link is on its way.</string>
+    <string name="message_verification_sent">Verification email sent. Open the link, then come back.</string>
+    <string name="message_email_not_verified">Your email is not verified yet</string>
+    <string name="message_password_updated">Password updated</string>
+    <string name="message_email_update_sent">Check your new inbox and open the link to confirm the change.</string>
+    <string name="message_account_deleted">Account deleted</string>
+    <string name="message_coming_soon">Coming soon</string>
+    <string name="message_no_app_found">No app found to open this</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_reset_title">Reset Forgot Password?</string>
+    <string name="dialog_reset_message">Enter your email to get your new Password!</string>
+    <string name="dialog_reset_positive">Reset</string>
+    <string name="dialog_update_email_title">Update Email</string>
+    <string name="dialog_update_email_message">Enter your new email address</string>
+    <string name="dialog_update_email_positive">Update</string>
+    <string name="dialog_delete_title">Delete Account Permanently?</string>
+    <string name="dialog_delete_message">This removes your account and cannot be undone.</string>
+    <string name="dialog_delete_positive">Delete</string>
+    <string name="dialog_exit_title">Exit Application?</string>
+    <string name="dialog_exit_message">Click yes to exit!</string>
+    <string name="dialog_yes">Yes</string>
+    <string name="dialog_no">No</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- Profile -->
+    <string name="profile_name">Name: %1$s</string>
+    <string name="profile_email">Email: %1$s</string>
+
+    <!-- Share / feedback -->
+    <string name="share_chooser_title">Share via</string>
+    <string name="share_message">I look after my plants with %1$s: %2$s</string>
+    <string name="feedback_email">Shahryartariq57@gmail.com</string>
+    <string name="feedback_subject">%1$s feedback</string>
+    <string name="feedback_body">From: %1$s\n\n%2$s</string>
 </resources>
