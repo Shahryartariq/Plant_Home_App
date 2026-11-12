@@ -4,6 +4,8 @@ An Android app for looking after house plants. Sign up, verify your email, pick 
 
 Built in Java with Firebase Authentication and the AndroidX Navigation component.
 
+I designed and built PlantsHome as my semester project in 2021. In 2026 I brought it up to date without changing the design: a current SDK and build tools, fixes for the flows that never worked, a release build and CI.
+
 [![Android CI](https://github.com/Shahryartariq/Plant_Home_App/actions/workflows/android.yml/badge.svg)](https://github.com/Shahryartariq/Plant_Home_App/actions/workflows/android.yml)
 
 ## Features
