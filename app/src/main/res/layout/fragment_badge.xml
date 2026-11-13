@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center"
-            android:text="Congratulation you earn a badge"
+            android:id="@+id/badgeMessage"
+            android:text="@string/badge_earned_first"
             android:textColor="@color/lightGreen" />
 
         <ImageView
@@ -30,6 +31,7 @@
             android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/mybadge"
+            android:contentDescription="@string/badge_image"
 
 
             />
@@ -42,7 +44,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@color/lightGreen"
             android:paddingHorizontal="40dp"
-            android:text="Start"
+            android:text="@string/badge_start"
             android:textColor="@color/black"
             app:backgroundTint="@color/lightGreen"
             android:layout_gravity="center"

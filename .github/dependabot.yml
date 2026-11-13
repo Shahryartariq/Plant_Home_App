@@ -1,0 +1,17 @@
+# Weekly pull requests for outdated Gradle libraries and GitHub Actions.
+version: 2
+updates:
+  - package-ecosystem: gradle
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      androidx:
+        patterns: ["androidx.*"]
+      firebase:
+        patterns: ["com.google.firebase*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

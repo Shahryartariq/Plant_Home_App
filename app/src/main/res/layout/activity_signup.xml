@@ -16,6 +16,7 @@
 
     <ImageButton
         android:id="@+id/backToMain"
+        android:contentDescription="@string/detail_back"
         android:layout_width="101dp"
         android:layout_height="51dp"
         android:layout_gravity="center"
@@ -119,7 +120,7 @@
                 android:background="@drawable/button_rounded"
                 android:backgroundTint="@color/green"
                 android:elevation="2dp"
-                android:text="Register"
+                android:text="@string/signup_register"
                 android:textSize="15sp"
                 card_view:backgroundTint="@color/green" />
 
@@ -135,7 +136,7 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:shadowColor="@color/black"
-        android:text="OR SIGN UP WITH"
+        android:text="@string/or_sign_up_with"
         android:textColor="@color/green"
         card_view:backgroundTint="#FFFFFF"
         card_view:iconTint="#00FFFFFF"
@@ -148,6 +149,7 @@
 
     <ImageView
         android:id="@+id/btnfb"
+        android:contentDescription="@string/sign_in_facebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
@@ -161,6 +163,7 @@
 
     <ImageView
         android:id="@+id/btngo"
+        android:contentDescription="@string/sign_in_google"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"

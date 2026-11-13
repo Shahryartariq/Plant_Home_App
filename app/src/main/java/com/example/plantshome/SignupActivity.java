@@ -3,6 +3,9 @@ package com.example.plantshome;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.annotation.Nullable;
+
+import com.example.plantshome.auth.GoogleSignIn;
 import com.example.plantshome.databinding.ActivitySignupBinding;
 import com.example.plantshome.util.AppNavigator;
 import com.example.plantshome.util.AuthErrors;
@@ -28,7 +31,7 @@ public class SignupActivity extends BaseActivity {
         binding.backToMain.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
         binding.registerUser.setOnClickListener(v -> register());
         binding.btnfb.setOnClickListener(v -> toast(R.string.message_coming_soon));
-        binding.btngo.setOnClickListener(v -> toast(R.string.message_coming_soon));
+        binding.btngo.setOnClickListener(v -> signUpWithGoogle());
     }
 
     private void register() {
@@ -71,6 +74,24 @@ public class SignupActivity extends BaseActivity {
                         AppNavigator.startFresh(this, VerifyEmailActivity.class);
                     }
                 });
+    }
+
+    private void signUpWithGoogle() {
+        setLoading(true);
+        GoogleSignIn.signIn(this, new GoogleSignIn.Callback() {
+            @Override
+            public void onSignedIn() {
+                AppNavigator.routeSignedInUser(SignupActivity.this);
+            }
+
+            @Override
+            public void onFailed(@Nullable String message) {
+                setLoading(false);
+                if (message != null) {
+                    toast(message);
+                }
+            }
+        });
     }
 
     private void setLoading(boolean loading) {

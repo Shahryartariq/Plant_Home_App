@@ -58,11 +58,27 @@ jobs:
             echo "::error title=Gradle::${msg}"
           done
 
+      - name: Lint summary
+        if: always()
+        run: |
+          report=app/build/reports/lint-results.txt
+          [ -f "$report" ] || exit 0
+          tail -n 1 "$report"
+          grep -E '^[^ ].*: (Warning|Error|Information):' "$report" | head -60 > lint-issues.txt || true
+          split -l 20 lint-issues.txt lint_chunk_ || true
+          for f in lint_chunk_*; do
+            [ -f "$f" ] || continue
+            msg=$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' "$f")
+            echo "::notice title=Lint::${msg}"
+          done
+          echo "::notice title=Lint total::$(tail -n 1 "$report")"
+
       - uses: actions/upload-artifact@v5
         if: success()
         with:
           name: plantshome-debug-apk
           path: app/build/outputs/apk/debug/*.apk
+          retention-days: 14
 
       - uses: actions/upload-artifact@v5
         if: always()
@@ -70,3 +86,4 @@ jobs:
           name: lint-report
           path: app/build/reports/lint-results-debug.html
           if-no-files-found: ignore
+          retention-days: 14

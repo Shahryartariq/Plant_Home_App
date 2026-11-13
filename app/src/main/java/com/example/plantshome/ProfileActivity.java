@@ -6,6 +6,7 @@ import android.text.TextUtils;
 
 import androidx.appcompat.app.AlertDialog;
 
+import com.example.plantshome.data.PlantPhotos;
 import com.example.plantshome.databinding.ActivityProfileBinding;
 import com.example.plantshome.databinding.ResetPopupBinding;
 import com.example.plantshome.util.AppNavigator;
@@ -104,6 +105,7 @@ public class ProfileActivity extends BaseActivity {
         user.delete()
                 .addOnSuccessListener(this, unused -> {
                     OnboardingPrefs.clear(this, uid);
+                    PlantPhotos.deleteAll(this);
                     toast(R.string.message_account_deleted);
                     AppNavigator.signOut(this);
                 })
