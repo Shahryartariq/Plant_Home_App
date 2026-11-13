@@ -50,8 +50,8 @@ jobs:
       - name: Show build errors
         if: failure()
         run: |
-          grep -E "error:|warning: \[|e: |What went wrong|> .*failed|Error:|FAILED" -A4 build.log \
-            | head -150 > errors.txt || true
+          { grep -A30 "What went wrong" build.log | head -60;
+            grep -E "error:|warning: \[|e: |> .*failed|Error:|FAILED" -A4 build.log | head -90; } > errors.txt || true
           split -l 25 errors.txt chunk_
           for f in chunk_*; do
             msg=$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' "$f")
