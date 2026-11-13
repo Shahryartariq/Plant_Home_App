@@ -18,6 +18,7 @@ import com.example.plantshome.data.Plant;
 import com.example.plantshome.data.PlantCatalog;
 import com.example.plantshome.data.PlantPhotos;
 import com.example.plantshome.databinding.ActivityDetailBinding;
+import com.example.plantshome.util.Session;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -35,6 +36,7 @@ public class PlantDetailActivity extends BaseActivity {
 
     private ActivityDetailBinding binding;
     private Plant plant;
+    private String uid;
 
     private final ActivityResultLauncher<Uri> takePhoto = registerForActivityResult(
             new ActivityResultContracts.TakePicture(), this::onPhotoTaken);
@@ -51,6 +53,7 @@ public class PlantDetailActivity extends BaseActivity {
         if (plant == null) {
             plant = PlantCatalog.all().get(0);
         }
+        uid = Session.uid();
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -62,7 +65,7 @@ public class PlantDetailActivity extends BaseActivity {
     }
 
     private void openCamera() {
-        File pending = PlantPhotos.pending(this, plant.index);
+        File pending = PlantPhotos.pending(this, uid, plant.index);
         try {
             takePhoto.launch(PlantPhotos.shareableUri(this, pending));
         } catch (ActivityNotFoundException noCamera) {
@@ -71,17 +74,17 @@ public class PlantDetailActivity extends BaseActivity {
     }
 
     private void onPhotoTaken(Boolean saved) {
-        if (Boolean.TRUE.equals(saved) && PlantPhotos.commit(this, plant.index)) {
+        if (Boolean.TRUE.equals(saved) && PlantPhotos.commit(this, uid, plant.index)) {
             toast(R.string.detail_photo_saved);
             showAlbumPhoto();
         } else {
-            PlantPhotos.discardPending(this, plant.index);
+            PlantPhotos.discardPending(this, uid, plant.index);
         }
     }
 
     /** Shows the user's photo for this plant, or keeps the default album picture. */
     private void showAlbumPhoto() {
-        File photo = PlantPhotos.photo(this, plant.index);
+        File photo = PlantPhotos.photo(this, uid, plant.index);
         if (!photo.exists()) {
             return;
         }

@@ -1,12 +1,7 @@
 package com.example.plantshome;
 
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.InsetDrawable;
-import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.Toast;
 
@@ -25,7 +20,7 @@ import androidx.core.view.WindowInsetsCompat;
  *
  * <p>From Android 15 (targetSdk 35+) apps always draw edge-to-edge. To keep the original look,
  * this pads the content so nothing sits under the status bar, navigation bar or keyboard, and
- * paints the bar areas in the app's green, like the old green status bar.
+ * paints only the bar strips in the app's green, like the old green status bar.
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
@@ -44,15 +39,15 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (content == null) {
             return;
         }
-        int barColor = ContextCompat.getColor(this, R.color.green);
-        int pageColor = resolveWindowBackground();
+        SystemBarsDrawable bars = new SystemBarsDrawable(ContextCompat.getColor(this, R.color.green));
+        content.setBackground(bars);
         ViewCompat.setOnApplyWindowInsetsListener(content, (view, windowInsets) -> {
-            Insets bars = windowInsets.getInsets(
+            Insets insets = windowInsets.getInsets(
                     WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
             Insets ime = windowInsets.getInsets(WindowInsetsCompat.Type.ime());
-            int bottom = Math.max(bars.bottom, ime.bottom);
-            view.setPadding(bars.left, bars.top, bars.right, bottom);
-            view.setBackground(barBackground(barColor, pageColor, bars.left, bars.top, bars.right, bars.bottom));
+            int bottom = Math.max(insets.bottom, ime.bottom);
+            view.setPadding(insets.left, insets.top, insets.right, bottom);
+            bars.setInsets(insets.left, insets.top, insets.right, insets.bottom);
             return WindowInsetsCompat.CONSUMED;
         });
         ViewCompat.requestApplyInsets(content);
@@ -64,21 +59,5 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected void toast(CharSequence message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    private static Drawable barBackground(int barColor, int pageColor,
-                                          int left, int top, int right, int bottom) {
-        Drawable page = new InsetDrawable(new ColorDrawable(pageColor), left, top, right, bottom);
-        return new LayerDrawable(new Drawable[]{new ColorDrawable(barColor), page});
-    }
-
-    private int resolveWindowBackground() {
-        TypedValue value = new TypedValue();
-        if (getTheme().resolveAttribute(android.R.attr.colorBackground, value, true)
-                && value.type >= TypedValue.TYPE_FIRST_COLOR_INT
-                && value.type <= TypedValue.TYPE_LAST_COLOR_INT) {
-            return value.data;
-        }
-        return Color.WHITE;
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+ backup and device transfer.
+     Only the user's plant data is copied. The Firebase sign-in token is left out on purpose,
+     so a restored phone has to sign in again. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="sharedpref" path="plantshome_onboarding.xml" />
+        <include domain="sharedpref" path="plantshome_care.xml" />
+        <include domain="file" path="plant_photos/" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="sharedpref" path="plantshome_onboarding.xml" />
+        <include domain="sharedpref" path="plantshome_care.xml" />
+        <include domain="file" path="plant_photos/" />
+    </device-transfer>
+</data-extraction-rules>

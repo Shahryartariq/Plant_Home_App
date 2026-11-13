@@ -37,12 +37,12 @@ public class InputValidatorTest {
     }
 
     @Test
-    public void newPassword_enforcesFirebaseMinimum() {
+    public void newPassword_needsEightCharacters() {
         assertEquals(InputValidator.Result.REQUIRED, InputValidator.newPassword(null));
-        assertEquals(InputValidator.Result.TOO_SHORT, InputValidator.newPassword("12345"));
-        assertEquals(InputValidator.Result.OK, InputValidator.newPassword("123456"));
+        assertEquals(InputValidator.Result.TOO_SHORT, InputValidator.newPassword("1234567"));
+        assertEquals(InputValidator.Result.OK, InputValidator.newPassword("12345678"));
         // Spaces count: passwords are never trimmed.
-        assertEquals(InputValidator.Result.OK, InputValidator.newPassword("  abcd"));
+        assertEquals(InputValidator.Result.OK, InputValidator.newPassword("  abcdef"));
     }
 
     @Test

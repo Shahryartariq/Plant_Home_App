@@ -64,8 +64,8 @@ jobs:
           report=app/build/reports/lint-results.txt
           [ -f "$report" ] || exit 0
           tail -n 1 "$report"
-          grep -E '^[^ ].*: (Warning|Error|Information):' "$report" | head -60 > lint-issues.txt || true
-          split -l 20 lint-issues.txt lint_chunk_ || true
+          grep -E '^[^ ].*: (Warning|Error|Information):' "$report" | sed 's#^.*/plantshome/##' | head -135 > lint-issues.txt || true
+          split -l 15 lint-issues.txt lint_chunk_ || true
           for f in lint_chunk_*; do
             [ -f "$f" ] || continue
             msg=$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' "$f")

@@ -1,0 +1,20 @@
+PlantsHome is a simple plant care diary for your houseplants. Keep track of what your plants need, tick off today's care, and earn a badge for every day you look after them.
+
+<b>What you can do</b>
+• See your plants at a glance in "My Plant World" and search them by name
+• Open any plant for its care notes: light, watering and humidity
+• Keep a photo album for each plant with your phone's camera
+• Tick off today's care in the Daily Report: water, sunlight, fertilizer and cuttings
+• Work through the Tasks panel, which lists which plants need watering
+• Earn a badge each day you finish your plant care
+• Get a gentle daily watering reminder at 9:00 (optional)
+• Pick the plants you like when you sign up
+
+<b>Plants with care notes</b>
+Monstera Adansonii (Swiss Cheese plant), Monstera Deliciosa, Jade Pothos, Golden Pothos, Calathea, Calathea Freddie and Calathea Lancifolia (Rattlesnake plant).
+
+<b>Your account</b>
+Sign up with email and password or continue with Google. Your email is verified, and you can change your email or password, or delete your account and its data, from your profile at any time.
+
+<b>Privacy</b>
+Plant photos stay on your phone. PlantsHome has no ads and no tracking.

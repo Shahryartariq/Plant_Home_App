@@ -47,6 +47,19 @@ public final class CareLog {
         return new CareLog(prefs, uid, CareLog::localToday);
     }
 
+    /** Removes all of one account's progress (used when the account is deleted). */
+    public static void clear(@NonNull Context context, @NonNull String uid) {
+        SharedPreferences prefs = context.getApplicationContext()
+                .getSharedPreferences(FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        for (String key : prefs.getAll().keySet()) {
+            if (key.startsWith(uid + ".")) {
+                editor.remove(key);
+            }
+        }
+        editor.apply();
+    }
+
     public boolean isDone(@NonNull Care care) {
         ensureToday();
         return prefs.getBoolean(careKey(care), false);

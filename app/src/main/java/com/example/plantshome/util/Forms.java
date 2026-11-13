@@ -48,8 +48,8 @@ public final class Forms {
                 message = context.getString(R.string.error_email_invalid);
                 break;
             case TOO_SHORT:
-                message = context.getString(R.string.error_password_too_short,
-                        InputValidator.MIN_PASSWORD_LENGTH);
+                message = context.getResources().getQuantityString(R.plurals.error_password_too_short,
+                        InputValidator.MIN_PASSWORD_LENGTH, InputValidator.MIN_PASSWORD_LENGTH);
                 break;
             case MISMATCH:
                 message = context.getString(R.string.error_passwords_do_not_match);

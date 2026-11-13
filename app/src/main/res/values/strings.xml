@@ -41,7 +41,10 @@
     <string name="error_email_required">Email is required</string>
     <string name="error_email_invalid">Please enter a valid email</string>
     <string name="error_password_required">Password is required</string>
-    <string name="error_password_too_short">Password must be at least %1$d characters</string>
+    <plurals name="error_password_too_short">
+        <item quantity="one">Password must be at least %1$d character</item>
+        <item quantity="other">Password must be at least %1$d characters</item>
+    </plurals>
     <string name="error_passwords_do_not_match">Passwords do not match</string>
     <string name="error_feedback_required">Please write your feedback</string>
 

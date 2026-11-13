@@ -36,8 +36,8 @@ public final class AuthErrors {
             return context.getString(R.string.message_too_many_requests);
         }
         if (error instanceof FirebaseAuthWeakPasswordException) {
-            return context.getString(R.string.error_password_too_short,
-                    InputValidator.MIN_PASSWORD_LENGTH);
+            return context.getResources().getQuantityString(R.plurals.error_password_too_short,
+                    InputValidator.MIN_PASSWORD_LENGTH, InputValidator.MIN_PASSWORD_LENGTH);
         }
         if (error instanceof FirebaseAuthUserCollisionException) {
             return context.getString(R.string.message_email_in_use);

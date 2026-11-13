@@ -13,10 +13,14 @@ import androidx.core.content.FileProvider;
 import androidx.exifinterface.media.ExifInterface;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 /**
- * The photo a user took for each plant's "Photo Album", stored in the app's private files.
+ * Photos the user adds: one per plant (its "Photo Album") and one profile photo.
+ * Stored per account in the app's private files, so other accounts on the phone can't see them.
  */
 public final class PlantPhotos {
 
@@ -27,14 +31,19 @@ public final class PlantPhotos {
 
     /** The saved photo for a plant (may not exist yet). */
     @NonNull
-    public static File photo(@NonNull Context context, int plantIndex) {
-        return new File(folder(context), "plant_" + plantIndex + ".jpg");
+    public static File photo(@NonNull Context context, @NonNull String uid, int plantIndex) {
+        return new File(folder(context, uid), "plant_" + plantIndex + ".jpg");
     }
 
     /** Where the camera app writes; only replaces the saved photo if the shot succeeds. */
     @NonNull
-    public static File pending(@NonNull Context context, int plantIndex) {
-        return new File(folder(context), "plant_" + plantIndex + ".pending.jpg");
+    public static File pending(@NonNull Context context, @NonNull String uid, int plantIndex) {
+        return new File(folder(context, uid), "plant_" + plantIndex + ".pending.jpg");
+    }
+
+    @NonNull
+    public static File profilePhoto(@NonNull Context context, @NonNull String uid) {
+        return new File(folder(context, uid), "profile.jpg");
     }
 
     @NonNull
@@ -43,35 +52,63 @@ public final class PlantPhotos {
     }
 
     /** Keeps a successful shot as the plant's photo. */
-    public static boolean commit(@NonNull Context context, int plantIndex) {
-        File pending = pending(context, plantIndex);
+    public static boolean commit(@NonNull Context context, @NonNull String uid, int plantIndex) {
+        File pending = pending(context, uid, plantIndex);
         if (!pending.exists() || pending.length() == 0) {
             return false;
         }
-        File photo = photo(context, plantIndex);
+        File photo = photo(context, uid, plantIndex);
         if (photo.exists() && !photo.delete()) {
             return false;
         }
         return pending.renameTo(photo);
     }
 
-    public static void discardPending(@NonNull Context context, int plantIndex) {
-        File pending = pending(context, plantIndex);
+    public static void discardPending(@NonNull Context context, @NonNull String uid, int plantIndex) {
+        File pending = pending(context, uid, plantIndex);
         if (pending.exists()) {
             //noinspection ResultOfMethodCallIgnored
             pending.delete();
         }
     }
 
-    public static void deleteAll(@NonNull Context context) {
-        File[] files = folder(context).listFiles();
-        if (files == null) {
-            return;
-        }
-        for (File file : files) {
+    /** Copies a picked image (e.g. from the photo picker) into {@code target}. */
+    @WorkerThread
+    public static boolean copy(@NonNull Context context, @NonNull Uri source, @NonNull File target) {
+        File temp = new File(target.getPath() + ".tmp");
+        try (InputStream in = context.getContentResolver().openInputStream(source);
+             OutputStream out = new FileOutputStream(temp)) {
+            if (in == null) {
+                return false;
+            }
+            byte[] buffer = new byte[16 * 1024];
+            int read;
+            while ((read = in.read(buffer)) != -1) {
+                out.write(buffer, 0, read);
+            }
+        } catch (IOException | SecurityException e) {
             //noinspection ResultOfMethodCallIgnored
-            file.delete();
+            temp.delete();
+            return false;
         }
+        if (target.exists() && !target.delete()) {
+            return false;
+        }
+        return temp.renameTo(target);
+    }
+
+    /** Removes every photo of one account (used when the account is deleted). */
+    public static void deleteAll(@NonNull Context context, @NonNull String uid) {
+        File folder = folder(context, uid);
+        File[] files = folder.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                //noinspection ResultOfMethodCallIgnored
+                file.delete();
+            }
+        }
+        //noinspection ResultOfMethodCallIgnored
+        folder.delete();
     }
 
     /**
@@ -138,8 +175,10 @@ public final class PlantPhotos {
         }
     }
 
-    private static File folder(Context context) {
-        File folder = new File(context.getFilesDir(), FOLDER);
+    private static File folder(Context context, String uid) {
+        // The uid is a Firebase id (letters and digits); keep only safe characters anyway.
+        String safe = uid.replaceAll("[^A-Za-z0-9_-]", "_");
+        File folder = new File(new File(context.getFilesDir(), FOLDER), safe);
         if (!folder.exists()) {
             //noinspection ResultOfMethodCallIgnored
             folder.mkdirs();

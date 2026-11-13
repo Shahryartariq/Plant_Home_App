@@ -89,6 +89,8 @@ dependencies {
     implementation libs.googleid
     implementation libs.androidx.navigation.fragment
     implementation libs.androidx.navigation.ui
+    // Installs the libraries' baseline profiles on sideloaded installs too, for faster start-up.
+    implementation libs.androidx.profileinstaller
     implementation libs.material
 
     implementation platform(libs.firebase.bom)

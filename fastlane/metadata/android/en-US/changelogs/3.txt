@@ -1,0 +1,7 @@
+• Every plant card opens its own care page
+• Photo album: add photos of each plant with your camera
+• Daily Report and Tasks now save your progress and earn badges
+• Optional daily watering reminder at 9:00
+• Search your plants from the toolbar
+• Continue with Google
+• Faster start-up, smaller app, and fixes across sign-up and profile
