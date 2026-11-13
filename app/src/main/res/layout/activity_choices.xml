@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/halfWhite"
-    tools:context=".Activity_Choices"
+    tools:context=".ChoicesActivity"
     android:fontFamily="@font/poppinsblack"
 
 
@@ -106,7 +106,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.121"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <TextView
@@ -124,7 +123,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/backToMain"
             app:layout_constraintVertical_bias="0.62" />
 
         <Button
@@ -195,7 +193,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.388"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <Button
@@ -212,7 +209,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.811"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <Button
@@ -231,7 +227,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.097"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView"
             app:layout_constraintVertical_bias="0.611" />
 
         <TextView

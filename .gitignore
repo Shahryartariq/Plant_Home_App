@@ -1,15 +1,18 @@
-*.iml
-.gradle
+# Gradle / Android Studio
+.gradle/
+build/
 /local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+*.iml
+.idea/
+.DS_Store
+
+# Firebase config is per-developer; see README.
+google-services.json
+
+# Signing material
+*.jks
+*.keystore
+keystore.properties

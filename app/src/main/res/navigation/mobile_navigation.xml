@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -13,50 +13,26 @@
 
     <fragment
         android:id="@+id/nav_report"
-        android:name="com.example.plantshome.ui.Report.fragment_report"
+        android:name="com.example.plantshome.ui.report.ReportFragment"
         android:label="@string/menu_report"
-        tools:layout="@layout/fragment_report_fragment" />
+        tools:layout="@layout/fragment_report" />
 
     <fragment
         android:id="@+id/nav_taskpanel"
-        android:name="com.example.plantshome.ui.taskpanel.Fragment_taskpanel"
+        android:name="com.example.plantshome.ui.taskpanel.TaskPanelFragment"
         android:label="@string/menu_taskpanel"
-        tools:layout="@layout/fragment_taskpanel_fragment" />
- <fragment
+        tools:layout="@layout/fragment_task_panel" />
+
+    <fragment
         android:id="@+id/nav_badge"
-        android:name="com.example.plantshome.ui.Badge.Fragment_Badge"
+        android:name="com.example.plantshome.ui.badge.BadgeFragment"
         android:label="@string/menu_badge"
-        tools:layout="@layout/fragment__badge_fragment" />
- <fragment
+        tools:layout="@layout/fragment_badge" />
+
+    <fragment
         android:id="@+id/nav_feedback"
-        android:name="com.example.plantshome.ui.feedback.Fragment_Feedback"
+        android:name="com.example.plantshome.ui.feedback.FeedbackFragment"
         android:label="@string/menu_feedback"
-        tools:layout="@layout/fragment__feedback_fragment" />
-
- <fragment
-        android:id="@+id/share"
-        android:name="com.example.plantshome.ui.share.Fragment_Share"
-        android:label=""
-        tools:layout="@layout/fragment__share_fragment" />
-
-    <fragment
-        android:id="@+id/btnLogout"
-        android:name="com.example.plantshome.ui.Logout.Fragment_Logout"
-        android:label=""
-        tools:layout="@layout/fragment__logout_fragment" />
-
-    <fragment
-        android:id="@+id/rate"
-        android:name="com.example.plantshome.ui.rate.Fragment_rate"
-        android:label=""
-        tools:layout="@layout/fragment_rate_fragment" />
-    <fragment
-        android:id="@+id/profile"
-        android:name="com.example.plantshome.ui.profile.Fragment_Profile"
-        android:label=""
-        tools:layout="@layout/fragment__profile_fragment" />
-
-
-
+        tools:layout="@layout/fragment_feedback" />
 
 </navigation>
