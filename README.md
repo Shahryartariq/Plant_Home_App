@@ -6,7 +6,7 @@ Built in Java with Firebase Authentication and the AndroidX Navigation component
 
 I designed and built PlantsHome as my semester project in 2021. In 2026 I brought it up to date without changing the design: a current SDK and build tools, fixes for the flows that never worked, a release build and CI.
 
-[![Android CI](https://github.com/Shahryartariq/Plant_Home_App/actions/workflows/android.yml/badge.svg)](https://github.com/Shahryartariq/Plant_Home_App/actions/workflows/android.yml)
+[![Android CI](https://github.com/Shahryartariq/plantshome/actions/workflows/android.yml/badge.svg)](https://github.com/Shahryartariq/plantshome/actions/workflows/android.yml)
 
 ## Features
 
@@ -49,7 +49,8 @@ app/src/main/java/com/example/plantshome/
 1. Install [Android Studio](https://developer.android.com/studio) (it bundles JDK 17).
 2. Clone the repo:
    ```bash
-   git clone https://github.com/Shahryartariq/Plant_Home_App.git
+   git clone https://github.com/Shahryartariq/plantshome.git
+   cd plantshome
    ```
 3. Add your Firebase config. It is not in the repo on purpose.
    1. In the [Firebase console](https://console.firebase.google.com/), create a project, or open an existing one.
