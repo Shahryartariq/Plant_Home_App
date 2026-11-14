@@ -24,6 +24,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          # The build never pushes, so the job keeps no git credentials on disk.
+          persist-credentials: false
 
       - uses: actions/setup-java@v5
         with:

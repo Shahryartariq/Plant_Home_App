@@ -48,6 +48,7 @@
 
             <EditText
                 android:id="@+id/userName"
+                android:autofillHints="emailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -60,6 +61,7 @@
 
             <EditText
                 android:id="@+id/myFeedback"
+                android:importantForAutofill="no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"

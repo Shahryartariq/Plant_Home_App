@@ -7,13 +7,12 @@
 
     <EditText
         android:id="@+id/resetEmailPop"
+        android:autofillHints="emailAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginTop="136dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="@string/reset_popup_hint"
         android:inputType="textEmailAddress"

@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.plantshome.PlantDetailActivity;
+import com.example.plantshome.R;
 import com.example.plantshome.data.Plant;
 import com.example.plantshome.data.PlantCatalog;
 import com.example.plantshome.databinding.FragmentHomeBinding;
@@ -62,12 +63,18 @@ public class HomeFragment extends Fragment {
         ViewGroup grid = binding.mainGridLayout;
         // GridLayout places children in order, so re-add the matches instead of hiding the rest.
         grid.removeAllViews();
+        int matches = 0;
         for (int i = 0; i < cards.size(); i++) {
             String name = getString(PlantCatalog.all().get(i).name).toLowerCase(Locale.getDefault());
             if (needle.isEmpty() || name.contains(needle)) {
                 grid.addView(cards.get(i));
+                matches++;
             }
         }
+        // With no matches the grid is empty, so the title explains why.
+        binding.textHome.setText(matches == 0
+                ? getString(R.string.search_no_results, query)
+                : getString(R.string.home_title));
     }
 
     private static void bindCard(View card, Plant plant) {

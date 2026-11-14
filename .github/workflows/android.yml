@@ -20,6 +20,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          # The build never pushes, so the job keeps no git credentials on disk.
+          persist-credentials: false
 
       - uses: actions/setup-java@v5
         with:
@@ -73,14 +76,14 @@ jobs:
           done
           echo "::notice title=Lint total::$(tail -n 1 "$report")"
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: success()
         with:
           name: plantshome-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 14
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: lint-report

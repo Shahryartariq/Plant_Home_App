@@ -9,12 +9,14 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import androidx.credentials.ClearCredentialStateRequest;
 import androidx.credentials.Credential;
 import androidx.credentials.CredentialManager;
 import androidx.credentials.CredentialManagerCallback;
 import androidx.credentials.CustomCredential;
 import androidx.credentials.GetCredentialRequest;
 import androidx.credentials.GetCredentialResponse;
+import androidx.credentials.exceptions.ClearCredentialException;
 import androidx.credentials.exceptions.GetCredentialCancellationException;
 import androidx.credentials.exceptions.GetCredentialException;
 import androidx.credentials.exceptions.NoCredentialException;
@@ -88,6 +90,29 @@ public final class GoogleSignIn {
                         callback.onFailed(activity.getString(error instanceof NoCredentialException
                                 ? R.string.message_no_google_account
                                 : R.string.message_generic_error));
+                    }
+                });
+    }
+
+    /**
+     * Clears the remembered Google account on sign out, so the next person on this phone
+     * gets the account picker instead of being signed straight back in.
+     */
+    public static void forgetAccount(@NonNull Context context) {
+        Context app = context.getApplicationContext();
+        CredentialManager.create(app).clearCredentialStateAsync(
+                new ClearCredentialStateRequest(),
+                new CancellationSignal(),
+                ContextCompat.getMainExecutor(app),
+                new CredentialManagerCallback<Void, ClearCredentialException>() {
+                    @Override
+                    public void onResult(Void result) {
+                        // Nothing to do.
+                    }
+
+                    @Override
+                    public void onError(@NonNull ClearCredentialException error) {
+                        Log.w(TAG, "Could not clear credential state", error);
                     }
                 });
     }

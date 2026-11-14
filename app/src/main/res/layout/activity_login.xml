@@ -49,6 +49,7 @@
 
             <EditText
                 android:id="@+id/email"
+                android:autofillHints="emailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
@@ -60,6 +61,7 @@
 
             <EditText
                 android:id="@+id/password"
+                android:autofillHints="password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
@@ -146,6 +148,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/sign_in_icons__2_"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
@@ -158,6 +161,7 @@
         android:id="@+id/btngo"
         android:contentDescription="@string/sign_in_google"
         android:clickable="true"
+        android:focusable="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/sign_in_icons__1_"

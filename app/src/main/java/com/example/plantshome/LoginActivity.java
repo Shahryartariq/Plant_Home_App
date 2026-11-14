@@ -3,6 +3,7 @@ package com.example.plantshome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
@@ -29,6 +30,13 @@ public class LoginActivity extends BaseActivity {
         auth = FirebaseAuth.getInstance();
 
         binding.btnLogin.setOnClickListener(v -> signIn());
+        binding.password.setOnEditorActionListener((field, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                signIn();
+                return true;
+            }
+            return false;
+        });
         binding.register.setOnClickListener(v ->
                 startActivity(new Intent(this, SignupActivity.class)));
         binding.forgotPassword.setOnClickListener(v -> showResetPasswordDialog());

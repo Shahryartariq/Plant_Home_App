@@ -2,6 +2,7 @@ package com.example.plantshome;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 
 import androidx.annotation.Nullable;
 
@@ -30,6 +31,13 @@ public class SignupActivity extends BaseActivity {
 
         binding.backToMain.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
         binding.registerUser.setOnClickListener(v -> register());
+        binding.confirmPassword.setOnEditorActionListener((field, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                register();
+                return true;
+            }
+            return false;
+        });
         binding.btnfb.setOnClickListener(v -> toast(R.string.message_coming_soon));
         binding.btngo.setOnClickListener(v -> signUpWithGoogle());
     }

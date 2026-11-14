@@ -118,4 +118,4 @@ CI uses the `GOOGLE_SERVICES_JSON` repository secret when it is set. Without it,
 
 ## Privacy
 
-Plant photos and progress stay on the phone. There are no ads and no tracking. See [PRIVACY.md](PRIVACY.md).
+Plant photos and progress stay on the phone. There are no ads and no tracking. See [PRIVACY.md](PRIVACY.md) and [SECURITY.md](SECURITY.md).

@@ -72,7 +72,9 @@ android {
         // Copy and string warnings are reported, but only real errors fail the build.
         warningsAsErrors false
         // Library versions are pinned to what compileSdk 36 supports (see libs.versions.toml).
-        disable 'GradleDependency'
+        disable 'GradleDependency', 'AndroidGradlePluginVersion'
+        // Screens are portrait by design; Android ignores the lock on tablets and foldables anyway.
+        disable 'LockedOrientationActivity'
         textReport true
         textOutput layout.buildDirectory.file("reports/lint-results.txt").get().asFile
     }

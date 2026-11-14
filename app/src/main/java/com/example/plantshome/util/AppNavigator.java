@@ -9,6 +9,7 @@ import com.example.plantshome.ChoicesActivity;
 import com.example.plantshome.LoginActivity;
 import com.example.plantshome.MainActivity;
 import com.example.plantshome.VerifyEmailActivity;
+import com.example.plantshome.auth.GoogleSignIn;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -44,6 +45,7 @@ public final class AppNavigator {
 
     public static void signOut(@NonNull Activity from) {
         FirebaseAuth.getInstance().signOut();
+        GoogleSignIn.forgetAccount(from);
         startFresh(from, LoginActivity.class);
     }
 }

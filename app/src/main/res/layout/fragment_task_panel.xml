@@ -13,8 +13,8 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
@@ -25,7 +25,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_margin="17dp"
-        android:layout_marginRight="0dp"
+        android:layout_marginEnd="0dp"
         />
 
 
@@ -53,8 +53,8 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
@@ -65,7 +65,7 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:layout_margin="17dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
             />
 
 
@@ -110,8 +110,8 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
@@ -123,7 +123,7 @@
             android:gravity="center"
             android:checked="true"
             android:layout_margin="17dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
             />
 
 
@@ -152,8 +152,8 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
@@ -165,7 +165,7 @@
             android:gravity="center"
             android:checked="true"
             android:layout_margin="17dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
             />
 
 
@@ -193,8 +193,8 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
@@ -206,7 +206,7 @@
             android:gravity="center"
             android:checked="true"
             android:layout_margin="17dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
             />
 
 

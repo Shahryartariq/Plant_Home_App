@@ -153,6 +153,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/sign_in_icons__2_"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
@@ -167,6 +168,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/sign_in_icons__1_"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
@@ -181,8 +183,6 @@
         android:layout_height="wrap_content"
 
         android:layout_marginEnd="72dp"
-
-        android:layout_marginRight="72dp"
         android:visibility="gone"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
