@@ -41,18 +41,19 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:text="FEEDBACK"
+                android:text="@string/feedback_title"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/userName"
+                android:autofillHints="emailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="10dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:textColor="@color/green"
 
@@ -60,10 +61,11 @@
 
             <EditText
                 android:id="@+id/myFeedback"
+                android:importantForAutofill="no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:hint="Feedback"
+                android:hint="@string/feedback_hint"
                 android:inputType="text|textMultiLine"
                 android:lines="4"
                 android:maxLines="8"
@@ -76,7 +78,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/button_rounded"
                 android:elevation="8dp"
-                android:text="SUBMIT"
+                android:text="@string/feedback_submit"
                 android:id="@+id/btnSubmitFeedback"
                 android:textColor="@color/white"
                 card_view:backgroundTint="@color/green"

@@ -10,7 +10,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.plantshome.R;
+import com.example.plantshome.data.CareLog;
 import com.example.plantshome.databinding.FragmentBadgeBinding;
+import com.example.plantshome.util.Session;
 import com.example.plantshome.util.TopLevelNav;
 
 public class BadgeFragment extends Fragment {
@@ -29,6 +31,24 @@ public class BadgeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         // "Start" begins the next day from the home screen.
         binding.btnbadgestart.setOnClickListener(v -> TopLevelNav.goTo(this, R.id.nav_home));
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        CareLog log = CareLog.forUser(requireContext(), Session.uid());
+        binding.badgeMessage.setText(message(log.isDayComplete(), log.badgeCount()));
+    }
+
+    private CharSequence message(boolean earnedToday, int badges) {
+        if (earnedToday) {
+            return badges <= 1
+                    ? getString(R.string.badge_earned_first)
+                    : getResources().getQuantityString(R.plurals.badge_earned, badges, badges);
+        }
+        return badges == 0
+                ? getString(R.string.badge_none_yet)
+                : getResources().getQuantityString(R.plurals.badge_not_today, badges, badges);
     }
 
     @Override

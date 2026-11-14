@@ -13,26 +13,28 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="100dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
     <CheckBox
+        android:id="@+id/taskCheck1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_margin="50px"
-        android:layout_marginRight="0dp"
+        android:layout_margin="17dp"
+        android:layout_marginEnd="0dp"
         />
 
 
         <ImageView
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="0px"
-            android:src="@drawable/task_plant"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/p12"
+            android:contentDescription="@string/task_image"
             android:layout_gravity="center"
             android:gravity="center"
             />
@@ -40,8 +42,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55px"
-            android:text="Its Time to water Jade Pothos Plant Free"/>
+            android:layout_margin="18dp"
+            android:id="@+id/taskText1"
+            tools:text="It's time to water your Jade Pothos"/>
 
     </LinearLayout>
 
@@ -50,26 +53,28 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
         <CheckBox
+        android:id="@+id/taskCheck2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:layout_margin="50px"
-            android:layout_marginRight="0dp"
+            android:layout_margin="17dp"
+            android:layout_marginEnd="0dp"
             />
 
 
         <ImageView
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="0px"
-            android:src="@drawable/task_plant"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/p12"
+            android:contentDescription="@string/task_image"
             android:layout_gravity="center"
             android:gravity="center"
             />
@@ -77,8 +82,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55px"
-            android:text="Its Time to water Jade Pothos Plant Free"/>
+            android:layout_margin="18dp"
+            android:id="@+id/taskText2"
+            tools:text="It's time to water your Jade Pothos"/>
 
 
 
@@ -94,7 +100,7 @@
         android:backgroundTint="@android:color/white"
         android:drawableTint="@color/white"
         android:gravity="center"
-        android:text="Completed Task"
+        android:text="@string/task_completed"
         android:textColor="@color/white"
 
         app:backgroundTint="@color/green" />
@@ -104,27 +110,29 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="25dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
         <CheckBox
+        android:id="@+id/taskCheck3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:checked="true"
-            android:layout_margin="50px"
-            android:layout_marginRight="0dp"
+            android:layout_margin="17dp"
+            android:layout_marginEnd="0dp"
             />
 
 
         <ImageView
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="0px"
-            android:src="@drawable/task_plant"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/p12"
+            android:contentDescription="@string/task_image"
             android:layout_gravity="center"
             android:gravity="center"
             />
@@ -132,8 +140,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55px"
-            android:text="Its Time to water Jade Pothos Plant Free"/>
+            android:layout_margin="18dp"
+            android:id="@+id/taskText3"
+            tools:text="It's time to water your Jade Pothos"/>
 
 
     </LinearLayout>
@@ -143,27 +152,29 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
         <CheckBox
+        android:id="@+id/taskCheck4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:checked="true"
-            android:layout_margin="50px"
-            android:layout_marginRight="0dp"
+            android:layout_margin="17dp"
+            android:layout_marginEnd="0dp"
             />
 
 
         <ImageView
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="0px"
-            android:src="@drawable/task_plant"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/p12"
+            android:contentDescription="@string/task_image"
             android:layout_gravity="center"
             android:gravity="center"
             />
@@ -171,8 +182,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55px"
-            android:text="Its Time to water Jade Pothos Plant Free"/>
+            android:layout_margin="18dp"
+            android:id="@+id/taskText4"
+            tools:text="It's time to water your Jade Pothos"/>
 
 
     </LinearLayout>
@@ -181,27 +193,29 @@
         android:layout_height="80dp"
         android:background="@drawable/rounded_chip_nav"
         android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="@color/white"
         android:orientation="horizontal">
 
         <CheckBox
+        android:id="@+id/taskCheck5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
             android:checked="true"
-            android:layout_margin="50px"
-            android:layout_marginRight="0dp"
+            android:layout_margin="17dp"
+            android:layout_marginEnd="0dp"
             />
 
 
         <ImageView
-            android:layout_width="120px"
-            android:layout_height="120px"
-            android:layout_margin="0px"
-            android:src="@drawable/task_plant"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="0dp"
+            android:src="@drawable/p12"
+            android:contentDescription="@string/task_image"
             android:layout_gravity="center"
             android:gravity="center"
             />
@@ -209,8 +223,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55px"
-            android:text="Its Time to water Jade Pothos Plant Free"/>
+            android:layout_margin="18dp"
+            android:id="@+id/taskText5"
+            tools:text="It's time to water your Jade Pothos"/>
 
 
     </LinearLayout>

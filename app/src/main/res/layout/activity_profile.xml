@@ -9,14 +9,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".GetStartedActivity">
+        android:layout_height="wrap_content"
+        tools:context=".ProfileActivity">
 
 
 
 
     <ImageView
             android:id="@+id/header_cover_image"
+            android:contentDescription="@string/profile_cover"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
@@ -24,6 +25,7 @@
 
         <ImageButton
             android:id="@+id/user_profile_photo"
+            android:contentDescription="@string/profile_photo"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_below="@+id/header_cover_image"
@@ -45,23 +47,7 @@
             android:paddingBottom="24dp">
 
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/add_friend"-->
-            <!--                android:layout_width="30dp"-->
-            <!--                android:layout_height="30dp"-->
-            <!--                android:layout_marginLeft="16dp"-->
-            <!--                android:layout_marginTop="16dp"-->
-            <!--                android:layout_toLeftOf="@+id/drop_down_option_menu"-->
-            <!--                android:src="@drawable/ic_home" />-->
 
-            <!--            <ImageView-->
-            <!--                android:id="@+id/drop_down_option_menu"-->
-            <!--                android:layout_width="30dp"-->
-            <!--                android:layout_height="30dp"-->
-            <!--                android:layout_alignParentRight="true"-->
-            <!--                android:layout_marginLeft="16dp"-->
-            <!--                android:layout_marginTop="16dp"-->
-            <!--                android:src="@drawable/p4" />-->
 
             <TextView
                 android:id="@+id/user_profile_name"
@@ -69,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="76dp"
-                android:text="Plant World"
+                android:text="@string/profile_header"
                 android:fontFamily="@font/poppinsmedium"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -82,7 +68,7 @@
                 android:layout_below="@+id/user_profile_name"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="12dp"
-                android:text="Like people, plants respond to extra attention"
+                android:text="@string/profile_bio"
                 android:textColor="@color/black"
                 android:fontFamily="@font/poppinsmedium"
                 android:textSize="14sp" />
@@ -108,7 +94,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:id="@+id/profileName"
-                android:text="Name: BSSE " />
+                android:importantForAutofill="no"
+                android:text="@string/profile_name_placeholder" />
 
             <EditText
                 android:focusable="false"
@@ -124,7 +111,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:id="@+id/profileEmail"
-                android:text="Email: BSSE@gmail.com" />
+                android:importantForAutofill="no"
+                android:text="@string/profile_email_placeholder" />
 
             <EditText
                 android:focusable="false"
@@ -138,7 +126,8 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:id="@+id/profilePassword"
-                android:text="Password: ********" />
+                android:importantForAutofill="no"
+                android:text="@string/profile_password" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -148,11 +137,12 @@
                 android:layout_marginBottom="3dp"
                 android:background="#fff"
                 android:clickable="true"
+                android:focusable="true"
                 android:elevation="4dp"
                 android:fontFamily="@font/poppinsbold"
                 android:padding="20dp"
                 android:id="@+id/updateEmailRow"
-                android:text="Update Email:" />
+                android:text="@string/profile_update_email" />
 
             <TextView
                 android:id="@+id/resetPasswordRow"
@@ -163,12 +153,13 @@
                 android:layout_marginTop="3dp"
                 android:background="#fff"
                 android:clickable="true"
+                android:focusable="true"
 
                 android:elevation="4dp"
                 android:padding="20dp"
 
                 android:fontFamily="@font/poppinsbold"
-                android:text="Reset Password " />
+                android:text="@string/profile_reset_password" />
 
             <TextView
                 android:layout_width="fill_parent"
@@ -176,11 +167,12 @@
                 android:layout_margin="5dp"
                 android:background="#fff"
                 android:clickable="true"
+                android:focusable="true"
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:fontFamily="@font/poppinsbold"
                 android:id="@+id/deleteAccountRow"
-                android:text="Delete Account" />
+                android:text="@string/profile_delete_account" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

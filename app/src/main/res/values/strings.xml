@@ -1,14 +1,11 @@
 <resources>
     <string name="app_name">PlantsHome</string>
     <string name="title">Plant Home</string>
-    <string name="description">Add Your New House Plants Here As your collection Grown and we will help you get care of them.</string>
+    <string name="description">Add Your New House Plants Here. As Your Collection Grows, We Will Help You Take Care of Them.</string>
     <string name="get_started">Get Started</string>
     <string name="thank">Thanks for being a part of us!</string>
 
-    <string name="plant_detail">The Monstera Adanonsii, aka the "Swiss Cheese" plant, is an easy to care for plant that Appreciates bright, indirect light. It is tolerant of medium - low light conditions, but prefers an east or west facing window.</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Admin</string>
     <string name="nav_header_subtitle">Care Plants Safe Life</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -41,12 +38,14 @@
     <string name="error_email_required">Email is required</string>
     <string name="error_email_invalid">Please enter a valid email</string>
     <string name="error_password_required">Password is required</string>
-    <string name="error_password_too_short">Password must be at least %1$d characters</string>
+    <plurals name="error_password_too_short">
+        <item quantity="one">Password must be at least %1$d character</item>
+        <item quantity="other">Password must be at least %1$d characters</item>
+    </plurals>
     <string name="error_passwords_do_not_match">Passwords do not match</string>
     <string name="error_feedback_required">Please write your feedback</string>
 
     <!-- Auth messages -->
-    <string name="message_please_wait">Please wait…</string>
     <string name="message_generic_error">Something went wrong. Please try again.</string>
     <string name="message_network_error">No internet connection. Please try again.</string>
     <string name="message_wrong_credentials">Wrong email or password</string>
@@ -55,7 +54,6 @@
     <string name="message_recent_login_required">For your security, please log in again and retry.</string>
     <string name="message_reset_email_sent">If an account exists for that email, a reset link is on its way.</string>
     <string name="message_verification_sent">Verification email sent. Open the link, then come back.</string>
-    <string name="message_email_not_verified">Your email is not verified yet</string>
     <string name="message_password_updated">Password updated</string>
     <string name="message_email_update_sent">Check your new inbox and open the link to confirm the change.</string>
     <string name="message_account_deleted">Account deleted</string>
@@ -88,4 +86,123 @@
     <string name="feedback_email">Shahryartariq57@gmail.com</string>
     <string name="feedback_subject">%1$s feedback</string>
     <string name="feedback_body">From: %1$s\n\n%2$s</string>
+    <!-- Plants (home cards, detail page, tasks) -->
+    <string name="plant_monstera_adansonii">Monstera Adansonii</string>
+    <string name="plant_jade_pothos">Jade Pothos</string>
+    <string name="plant_calathea_freddie">Calathea Freddie</string>
+    <string name="plant_calathea">Calathea</string>
+    <string name="plant_lancifolia">Lancifolia</string>
+    <string name="plant_monstera">Monstera</string>
+    <string name="plant_pothos">Pothos</string>
+
+    <string name="care_monstera_adansonii">The Monstera Adansonii, aka the \"Swiss Cheese\" plant, is an easy to care for plant that appreciates bright, indirect light. It is tolerant of medium to low light conditions, but prefers an east or west facing window.</string>
+    <string name="care_jade_pothos">Jade Pothos is a fast-growing trailing plant with solid green, heart-shaped leaves. Water it when the top few centimetres of soil are dry and keep it in bright, indirect light, though it copes well with lower light too.</string>
+    <string name="care_calathea_freddie">Calathea Freddie has long, light green leaves with dark green stripes that fold up at night. Keep the soil lightly moist, use filtered or rested water, and give it bright, indirect light and plenty of humidity.</string>
+    <string name="care_calathea">Calatheas are called prayer plants because their patterned leaves move with the light during the day. They like evenly moist soil, high humidity and bright, indirect light; direct sun fades the leaves.</string>
+    <string name="care_lancifolia">Calathea Lancifolia, the Rattlesnake Plant, has wavy, spotted leaves with purple undersides. Water when the top of the soil starts to dry, keep it away from cold drafts and out of direct sun.</string>
+    <string name="care_monstera">Monstera Deliciosa grows large, split leaves as it matures. Let the top half of the soil dry out between waterings, give it bright, indirect light, and add a moss pole if you want it to climb.</string>
+    <string name="care_pothos">Golden Pothos is one of the easiest houseplants to keep. Its marbled, heart-shaped leaves trail from shelves and baskets; water when the soil is half dry and keep it in medium to bright, indirect light.</string>
+
+    <!-- Screens -->
+    <string name="home_title">My Plant World</string>
+    <string name="detail_introduction">Introduction</string>
+    <string name="detail_photo_album">Photo Album</string>
+    <string name="detail_back">Back</string>
+    <string name="detail_take_photo">Take a photo of this plant</string>
+    <string name="detail_photo_saved">Photo added to the album</string>
+    <string name="detail_photo_failed">Couldn\'t load the photo</string>
+    <string name="detail_album_photo">Photo of %1$s</string>
+    <string name="cover_image">Plants on a shelf</string>
+
+    <string name="choices_title">Select Your Choices</string>
+    <string name="choices_group_sales">Sales</string>
+    <string name="choices_group_indoor">Indoor Plants</string>
+    <string name="choices_register">Register</string>
+    <string name="choices_pick_one">Pick at least one plant</string>
+    <string name="choice_boston_ivy">Boston Ivy</string>
+    <string name="choice_black_eyed_susan">Black-Eyed Susan</string>
+    <string name="choice_adonis">Adonis</string>
+    <string name="choice_butterfly_weed">Butterfly Weed</string>
+    <string name="choice_ambassador_allium">Ambassador Allium</string>
+    <string name="choice_aloe_vera">Aloe Vera</string>
+    <string name="choice_alberta_spruce">Alberta Spruce</string>
+    <string name="choice_bougainvillea">Bougainvillea</string>
+    <string name="choice_bunchberry">Bunchberry</string>
+
+    <string name="report_water">Water</string>
+    <string name="report_sunlight">Sunlight</string>
+    <string name="report_fertilizer">Fertilizer</string>
+    <string name="report_cuttings">Cuttings</string>
+    <string name="report_done_item">✓ %1$s</string>
+    <string name="report_all_done">All Done!</string>
+
+    <string name="task_water">It\'s time to water your %1$s</string>
+    <string name="task_completed">Completed Task</string>
+    <string name="task_image">Plant</string>
+
+    <string name="badge_start">Start</string>
+    <string name="badge_image">Badge</string>
+    <string name="badge_earned_first">Congratulations! You earned your first badge</string>
+    <plurals name="badge_earned">
+        <item quantity="one">Congratulations! You earned a badge. That\'s %1$d so far</item>
+        <item quantity="other">Congratulations! You earned a badge. That\'s %1$d so far</item>
+    </plurals>
+    <string name="badge_none_yet">Finish today\'s plant care to earn your first badge</string>
+    <plurals name="badge_not_today">
+        <item quantity="one">You have %1$d badge. Finish today\'s plant care to earn another</item>
+        <item quantity="other">You have %1$d badges. Finish today\'s plant care to earn another</item>
+    </plurals>
+
+    <string name="login_title">Login</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_forgot_password">FORGOT PASSWORD?</string>
+    <string name="or_sign_up_with">OR SIGN UP WITH</string>
+    <string name="sign_in_facebook">Continue with Facebook</string>
+    <string name="sign_in_google">Continue with Google</string>
+    <string name="signup_register">Register</string>
+    <string name="verify_title">Please verify your email</string>
+    <string name="verify_button">Verify</string>
+    <string name="logout">Logout</string>
+    <string name="reset_new_password">Enter new Password</string>
+    <string name="reset_confirm_password">Confirm the Password</string>
+    <string name="reset_save">Save</string>
+    <string name="reset_popup_hint">Enter the Email</string>
+    <string name="thanks_home">Home</string>
+
+    <string name="profile_header">Plant World</string>
+    <string name="profile_bio">Like people, plants respond to extra attention</string>
+    <string name="profile_name_placeholder">Name: BSSE</string>
+    <string name="profile_email_placeholder">Email: BSSE@gmail.com</string>
+    <string name="profile_password">Password: ********</string>
+    <string name="profile_update_email">Update Email</string>
+    <string name="profile_reset_password">Reset Password</string>
+    <string name="profile_delete_account">Delete Account</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="profile_cover">Profile cover</string>
+
+    <string name="feedback_title">FEEDBACK</string>
+    <string name="feedback_hint">Feedback</string>
+    <string name="feedback_submit">SUBMIT</string>
+
+    <!-- Google sign-in -->
+    <string name="message_no_google_account">No Google account found on this phone</string>
+    <string name="message_google_not_configured">Google sign-in isn\'t set up for this build yet</string>
+
+    <!-- Daily reminder -->
+    <string name="reminder_channel_name">Plant care reminders</string>
+    <string name="reminder_channel_description">A daily nudge to look after your plants</string>
+    <string name="reminder_title">Time for some plant care</string>
+    <string name="reminder_text">Water your plants and tick off today\'s tasks.</string>
+    <string name="reminder_dialog_title">Daily reminder</string>
+    <string name="reminder_dialog_message_off">Get a reminder every day at 9:00 to look after your plants?</string>
+    <string name="reminder_dialog_message_on">You get a reminder every day at 9:00. Turn it off?</string>
+    <string name="reminder_turn_on">Turn on</string>
+    <string name="reminder_turn_off">Turn off</string>
+    <string name="reminder_on">Daily reminder is on</string>
+    <string name="reminder_off">Daily reminder is off</string>
+    <string name="reminder_permission_denied">Allow notifications in Settings to get reminders</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search your plants</string>
+    <string name="search_no_results">No plants match \"%1$s\"</string>
 </resources>

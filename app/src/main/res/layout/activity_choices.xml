@@ -12,18 +12,6 @@
     >
 
 
-        <!--        <ImageButton-->
-        <!--            android:id="@+id/backToMain"-->
-        <!--            android:layout_width="101dp"-->
-        <!--            android:layout_height="51dp"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:background="@drawable/back"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintHorizontal_bias="0.0"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent"-->
-        <!--            app:layout_constraintVertical_bias="0.023" />-->
 
         <TextView
             android:id="@+id/textView6"
@@ -31,7 +19,7 @@
             android:layout_height="42dp"
             android:fontFamily="@font/poppinsblack"
 
-            android:text="Select Your Choices"
+            android:text="@string/choices_title"
             android:textColor="@color/textHalfBlack"
             android:textColorHighlight="@color/textHalfBlack"
             android:textSize="25sp"
@@ -48,7 +36,7 @@
             android:layout_height="48dp"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Boston Ivy"
+            android:text="@string/choice_boston_ivy"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +52,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Black-Eyed Susan"
+            android:text="@string/choice_black_eyed_susan"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -82,7 +70,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsregular"
-            android:text="Adonis"
+            android:text="@string/choice_adonis"
             android:textColor="@color/white"
             app:backgroundTint="@color/green"
             app:layout_constraintBaseline_toBaselineOf="@+id/button17"
@@ -99,7 +87,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsregular"
-            android:text="Butterfly Weed"
+            android:text="@string/choice_butterfly_weed"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,7 +103,7 @@
             android:layout_height="27dp"
             android:layout_marginBottom="272dp"
             android:fontFamily="@font/poppinsmedium"
-            android:text="Sales"
+            android:text="@string/choices_group_sales"
             android:textColor="@color/textHalfBlack"
             android:textColorHighlight="@color/textHalfBlack"
             android:textSize="20sp"
@@ -131,7 +119,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Ambassador Allium"
+            android:text="@string/choice_ambassador_allium"
             android:fontFamily="@font/poppinsregular"
 
             android:textColor="@color/white"
@@ -151,7 +139,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsregular"
-            android:text="Aloe Vera"
+            android:text="@string/choice_aloe_vera"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBaseline_toBaselineOf="@+id/button13"
@@ -167,7 +155,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsregular"
-            android:text="Alberta Spruce"
+            android:text="@string/choice_alberta_spruce"
             android:textColor="@color/white"
             app:backgroundTint="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -186,7 +174,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsbold"
-            android:text="Register"
+            android:text="@string/choices_register"
             android:textColor="@color/white"
             app:backgroundTint="@color/green"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -202,7 +190,7 @@
             android:layout_marginBottom="144dp"
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
-            android:text="Bougainvillea"
+            android:text="@string/choice_bougainvillea"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -220,7 +208,7 @@
             android:background="@drawable/button_rounded"
             android:backgroundTint="@android:color/white"
             android:fontFamily="@font/poppinsregular"
-            android:text="Bunchberry"
+            android:text="@string/choice_bunchberry"
             android:textColor="@color/green"
             app:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -233,7 +221,7 @@
             android:id="@+id/textView2"
             android:layout_width="173dp"
             android:layout_height="30dp"
-            android:text="Indoor Plants"
+            android:text="@string/choices_group_indoor"
             android:fontFamily="@font/poppinsmedium"
 
             android:textColor="@color/textHalfBlack"
@@ -246,12 +234,9 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.145" />
 
-        <!-- Button -->
 
 
-        <!--        Sales       -->
 
-        <!-- Button -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

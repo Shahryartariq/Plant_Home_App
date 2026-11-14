@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
  */
 public final class InputValidator {
 
-    /** Firebase Auth rejects passwords shorter than this. */
-    public static final int MIN_PASSWORD_LENGTH = 6;
+    /** Minimum length for new passwords (Firebase itself allows 6; existing accounts can still sign in). */
+    public static final int MIN_PASSWORD_LENGTH = 8;
 
     // Same shape as android.util.Patterns.EMAIL_ADDRESS.
     private static final Pattern EMAIL = Pattern.compile(

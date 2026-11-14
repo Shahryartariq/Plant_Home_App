@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 6-11 backup: same rules as data_extraction_rules.xml. -->
+<full-backup-content>
+    <include domain="sharedpref" path="plantshome_onboarding.xml" />
+    <include domain="sharedpref" path="plantshome_care.xml" />
+    <include domain="file" path="plant_photos/" />
+</full-backup-content>

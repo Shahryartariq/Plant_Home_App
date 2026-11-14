@@ -42,17 +42,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="20dp"
-                android:text="LOGIN"
+                android:text="@string/login_button"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <EditText
                 android:id="@+id/email"
+                android:autofillHints="emailAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:layout_margin="20dp"
                 android:textColor="@color/green"
 
@@ -60,10 +61,11 @@
 
             <EditText
                 android:id="@+id/password"
+                android:autofillHints="password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:hint="Password"
+                android:hint="@string/password"
                 android:layout_margin="20dp"
 
                 android:textColor="@color/green"
@@ -78,7 +80,7 @@
                 android:layout_margin="20dp"
                 android:background="@drawable/button_rounded"
                 android:backgroundTint="@color/green"
-                android:text="Login"
+                android:text="@string/login_title"
                 android:textSize="15sp"
                 card_view:backgroundTint="@color/green" />
 
@@ -93,7 +95,7 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:shadowColor="@color/black"
-        android:text="FORGOT PASSWORD?"
+        android:text="@string/login_forgot_password"
         android:textColor="@color/green"
         card_view:backgroundTint="#FFFFFF"
         card_view:iconTint="#00FFFFFF"
@@ -128,7 +130,7 @@
         android:layout_height="wrap_content"
         android:background="#00FFFFFF"
         android:shadowColor="@color/black"
-        android:text="OR SIGN UP WITH"
+        android:text="@string/or_sign_up_with"
         android:textColor="@color/green"
         card_view:backgroundTint="#FFFFFF"
         card_view:iconTint="#00FFFFFF"
@@ -142,9 +144,11 @@
 
     <ImageView
         android:id="@+id/btnfb"
+        android:contentDescription="@string/sign_in_facebook"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/sign_in_icons__2_"
         card_view:layout_constraintBottom_toBottomOf="parent"
         card_view:layout_constraintEnd_toEndOf="parent"
@@ -155,7 +159,9 @@
 
     <ImageView
         android:id="@+id/btngo"
+        android:contentDescription="@string/sign_in_google"
         android:clickable="true"
+        android:focusable="true"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/sign_in_icons__1_"

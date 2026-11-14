@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Folders shared with the camera app through FileProvider. -->
+<paths>
+    <files-path
+        name="plant_photos"
+        path="plant_photos/" />
+</paths>

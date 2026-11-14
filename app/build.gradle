@@ -16,8 +16,8 @@ android {
         applicationId 'com.example.plantshome'
         minSdk 23
         targetSdk 36
-        versionCode 2
-        versionName '1.1.0'
+        versionCode 3
+        versionName '1.2.0'
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
@@ -56,11 +56,27 @@ android {
         viewBinding true
     }
 
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            all {
+                // Set by `-Pscreenshots=<dir>` to render README screenshots (see ScreenshotTest).
+                systemProperty 'plantshome.screenshots', project.findProperty('screenshots') ?: ''
+            }
+        }
+    }
+
     lint {
         abortOnError true
         checkReleaseBuilds true
         // Copy and string warnings are reported, but only real errors fail the build.
         warningsAsErrors false
+        // Library versions are pinned to what compileSdk 36 supports (see libs.versions.toml).
+        disable 'GradleDependency', 'AndroidGradlePluginVersion'
+        // Screens are portrait by design; Android ignores the lock on tablets and foldables anyway.
+        disable 'LockedOrientationActivity'
+        textReport true
+        textOutput layout.buildDirectory.file("reports/lint-results.txt").get().asFile
     }
 }
 
@@ -70,14 +86,23 @@ dependencies {
     implementation libs.androidx.cardview
     implementation libs.androidx.constraintlayout
     implementation libs.androidx.core
+    implementation libs.androidx.credentials
+    implementation libs.androidx.credentials.play.services
+    implementation libs.androidx.exifinterface
+    implementation libs.androidx.work.runtime
+    implementation libs.googleid
     implementation libs.androidx.navigation.fragment
     implementation libs.androidx.navigation.ui
+    // Installs the libraries' baseline profiles on sideloaded installs too, for faster start-up.
+    implementation libs.androidx.profileinstaller
     implementation libs.material
 
     implementation platform(libs.firebase.bom)
     implementation libs.firebase.auth
 
     testImplementation libs.junit
+    testImplementation libs.robolectric
+    testImplementation libs.androidx.test.core
     androidTestImplementation libs.androidx.test.junit
     androidTestImplementation libs.androidx.test.espresso
 }

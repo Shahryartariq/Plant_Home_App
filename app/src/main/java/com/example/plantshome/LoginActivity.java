@@ -3,9 +3,12 @@ package com.example.plantshome;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 
+import com.example.plantshome.auth.GoogleSignIn;
 import com.example.plantshome.databinding.ActivityLoginBinding;
 import com.example.plantshome.databinding.ResetPopupBinding;
 import com.example.plantshome.util.AppNavigator;
@@ -27,11 +30,18 @@ public class LoginActivity extends BaseActivity {
         auth = FirebaseAuth.getInstance();
 
         binding.btnLogin.setOnClickListener(v -> signIn());
+        binding.password.setOnEditorActionListener((field, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                signIn();
+                return true;
+            }
+            return false;
+        });
         binding.register.setOnClickListener(v ->
                 startActivity(new Intent(this, SignupActivity.class)));
         binding.forgotPassword.setOnClickListener(v -> showResetPasswordDialog());
         binding.btnfb.setOnClickListener(v -> toast(R.string.message_coming_soon));
-        binding.btngo.setOnClickListener(v -> toast(R.string.message_coming_soon));
+        binding.btngo.setOnClickListener(v -> signInWithGoogle());
     }
 
     @Override
@@ -59,6 +69,24 @@ public class LoginActivity extends BaseActivity {
                     setLoading(false);
                     toast(AuthErrors.message(this, error));
                 });
+    }
+
+    private void signInWithGoogle() {
+        setLoading(true);
+        GoogleSignIn.signIn(this, new GoogleSignIn.Callback() {
+            @Override
+            public void onSignedIn() {
+                AppNavigator.routeSignedInUser(LoginActivity.this);
+            }
+
+            @Override
+            public void onFailed(@Nullable String message) {
+                setLoading(false);
+                if (message != null) {
+                    toast(message);
+                }
+            }
+        });
     }
 
     private void showResetPasswordDialog() {

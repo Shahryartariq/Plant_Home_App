@@ -1,11 +1,20 @@
 package com.example.plantshome;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.TextUtils;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.PickVisualMediaRequest;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AlertDialog;
 
+import com.example.plantshome.data.CareLog;
+import com.example.plantshome.data.PlantPhotos;
 import com.example.plantshome.databinding.ActivityProfileBinding;
 import com.example.plantshome.databinding.ResetPopupBinding;
 import com.example.plantshome.util.AppNavigator;
@@ -16,9 +25,20 @@ import com.example.plantshome.util.OnboardingPrefs;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class ProfileActivity extends BaseActivity {
 
+    private final ExecutorService io = Executors.newSingleThreadExecutor();
+    private final Handler main = new Handler(Looper.getMainLooper());
+
     private ActivityProfileBinding binding;
+
+    /** Tapping the profile picture opens the system photo picker (no storage permission needed). */
+    private final ActivityResultLauncher<PickVisualMediaRequest> pickPhoto = registerForActivityResult(
+            new ActivityResultContracts.PickVisualMedia(), this::onPhotoPicked);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +54,54 @@ public class ProfileActivity extends BaseActivity {
         binding.resetPasswordRow.setOnClickListener(v ->
                 startActivity(new Intent(this, ResetPasswordActivity.class)));
         binding.deleteAccountRow.setOnClickListener(v -> confirmDeleteAccount());
+        binding.userProfilePhoto.setOnClickListener(v -> pickPhoto.launch(new PickVisualMediaRequest.Builder()
+                .setMediaType(ActivityResultContracts.PickVisualMedia.ImageOnly.INSTANCE)
+                .build()));
+        showProfilePhoto();
+    }
+
+    private void onPhotoPicked(Uri uri) {
+        FirebaseUser user = currentUser();
+        if (uri == null || user == null) {
+            return;
+        }
+        File target = PlantPhotos.profilePhoto(this, user.getUid());
+        io.execute(() -> {
+            boolean saved = PlantPhotos.copy(this, uri, target);
+            main.post(() -> {
+                if (saved) {
+                    showProfilePhoto();
+                } else if (!isDestroyed()) {
+                    toast(R.string.detail_photo_failed);
+                }
+            });
+        });
+    }
+
+    private void showProfilePhoto() {
+        FirebaseUser user = currentUser();
+        if (user == null) {
+            return;
+        }
+        File photo = PlantPhotos.profilePhoto(this, user.getUid());
+        if (!photo.exists()) {
+            return;
+        }
+        int size = Math.max(binding.userProfilePhoto.getLayoutParams().width, 256);
+        io.execute(() -> {
+            Bitmap bitmap = PlantPhotos.load(photo, size);
+            main.post(() -> {
+                if (bitmap != null && !isDestroyed() && binding != null) {
+                    binding.userProfilePhoto.setImageBitmap(bitmap);
+                }
+            });
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        io.shutdownNow();
+        super.onDestroy();
     }
 
     @Override
@@ -104,6 +172,8 @@ public class ProfileActivity extends BaseActivity {
         user.delete()
                 .addOnSuccessListener(this, unused -> {
                     OnboardingPrefs.clear(this, uid);
+                    CareLog.clear(this, uid);
+                    PlantPhotos.deleteAll(this, uid);
                     toast(R.string.message_account_deleted);
                     AppNavigator.signOut(this);
                 })

@@ -18,7 +18,7 @@
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/green"
         android:gravity="center"
-        android:text="Water"
+        android:text="@string/report_water"
         android:textColor="@color/halfWhite"
         app:backgroundTint="@color/green" />
 
@@ -31,7 +31,7 @@
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/green"
         android:gravity="center"
-        android:text="Sunlight"
+        android:text="@string/report_sunlight"
         android:textColor="@color/halfWhite"
         app:backgroundTint="@color/green" />
 
@@ -44,7 +44,7 @@
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/green"
         android:gravity="center"
-        android:text="Fertilizer"
+        android:text="@string/report_fertilizer"
         android:textColor="@color/halfWhite"
         app:backgroundTint="@color/green" />
 
@@ -57,7 +57,7 @@
         android:background="@drawable/button_rounded"
         android:backgroundTint="@color/green"
         android:gravity="center"
-        android:text="Cuttings"
+        android:text="@string/report_cuttings"
         android:textColor="@color/halfWhite"
         app:backgroundTint="@color/green" />
 
@@ -71,7 +71,7 @@
         android:backgroundTint="@android:color/white"
         android:gravity="center"
 
-        android:text="All Done!"
+        android:text="@string/report_all_done"
         android:textColor="@color/black"
         app:backgroundTint="#FFFFFF"
         tools:ignore="onClick"

@@ -20,6 +20,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+        with:
+          # The build never pushes, so the job keeps no git credentials on disk.
+          persist-credentials: false
 
       - uses: actions/setup-java@v5
         with:
@@ -50,23 +53,40 @@ jobs:
       - name: Show build errors
         if: failure()
         run: |
-          grep -E "error:|warning: \[|e: |What went wrong|> .*failed|Error:|FAILED" -A4 build.log \
-            | head -150 > errors.txt || true
+          { grep -A30 "What went wrong" build.log | head -60;
+            grep -E "error:|warning: \[|e: |> .*failed|Error:|FAILED" -A4 build.log | head -90; } > errors.txt || true
           split -l 25 errors.txt chunk_
           for f in chunk_*; do
             msg=$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' "$f")
             echo "::error title=Gradle::${msg}"
           done
 
-      - uses: actions/upload-artifact@v5
+      - name: Lint summary
+        if: always()
+        run: |
+          report=app/build/reports/lint-results.txt
+          [ -f "$report" ] || exit 0
+          tail -n 1 "$report"
+          grep -E '^[^ ].*: (Warning|Error|Information):' "$report" | sed 's#^.*/plantshome/##' | head -135 > lint-issues.txt || true
+          split -l 15 lint-issues.txt lint_chunk_ || true
+          for f in lint_chunk_*; do
+            [ -f "$f" ] || continue
+            msg=$(sed ':a;N;$!ba;s/%/%25/g;s/\r//g;s/\n/%0A/g' "$f")
+            echo "::notice title=Lint::${msg}"
+          done
+          echo "::notice title=Lint total::$(tail -n 1 "$report")"
+
+      - uses: actions/upload-artifact@v6
         if: success()
         with:
           name: plantshome-debug-apk
           path: app/build/outputs/apk/debug/*.apk
+          retention-days: 14
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: always()
         with:
           name: lint-report
           path: app/build/reports/lint-results-debug.html
           if-no-files-found: ignore
+          retention-days: 14

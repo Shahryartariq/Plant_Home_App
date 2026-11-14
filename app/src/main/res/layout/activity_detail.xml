@@ -10,7 +10,7 @@
     >
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="330dp"
         android:orientation="vertical"
         android:background="@drawable/cover_highly_compressed"
@@ -18,6 +18,7 @@
         >
         <ImageButton
             android:id="@+id/backToMain"
+            android:contentDescription="@string/detail_back"
             android:layout_width="101dp"
             android:layout_height="51dp"
             android:layout_marginTop="20dp"
@@ -25,6 +26,7 @@
 
         <ImageButton
             android:id="@+id/camkbtn"
+            android:contentDescription="@string/detail_take_photo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -39,39 +41,41 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Monstera Adanonsii"
+        android:id="@+id/plantName"
+            android:text="@string/plant_monstera_adansonii"
         android:layout_gravity="center"
         android:layout_margin="15dp"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textColor="@color/black"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Introduction"
+        android:text="@string/detail_introduction"
         android:layout_gravity="start"
-        android:layout_marginLeft="10dp"
-        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
         android:textColor="@color/black"/>
 
      <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/plant_detail"
+        android:id="@+id/plantIntro"
+            android:text="@string/care_monstera_adansonii"
         android:layout_gravity="start"
-        android:layout_marginLeft="10dp"
-        android:textSize="15dp"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
         android:textColor="@color/textHalfBlack"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Photo Album"
+        android:text="@string/detail_photo_album"
         android:layout_gravity="start"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
         android:textColor="@color/black"/>
 
     <ImageView
@@ -79,6 +83,8 @@
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:layout_gravity="start"
+        android:id="@+id/photoAlbum"
+        android:contentDescription="@string/cover_image"
         android:src="@drawable/plantgroup_highly_compressed"/>
 
 
